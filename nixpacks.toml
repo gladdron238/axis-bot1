@@ -1,8 +1,8 @@
 [phases.setup]
-nixPkgs = ["python311", "libGL", "glib"]
+nixPkgs = ["python311", "python311Packages.pip", "libGL", "glib"]
 
 [phases.install]
-cmds = ["pip install -r requirements.txt"]
+cmds = ["python3 -m pip install -r requirements.txt"]
 
 [start]
-cmd = "python bot.py"
+cmd = "python3 bot.py"
